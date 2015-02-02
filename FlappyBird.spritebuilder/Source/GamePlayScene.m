@@ -6,7 +6,10 @@
 
 - (void)initialize
 {
+    // your code here
+    // load a new Character from the CCB file we created for named Character - Yun
     character = (Character*)[CCBReader load:@"Character"];
+    // add character as a child of physicsNode
     [physicsNode addChild:character];
     [self addObstacle];
     timeSinceObstacle = 0.0f;
@@ -30,8 +33,8 @@
     }
 }
 
-
--(void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+// put new methods here
+- (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
     // this will get called every time the player touches the screen
     [character flap];
 }

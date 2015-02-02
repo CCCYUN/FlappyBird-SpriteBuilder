@@ -11,6 +11,7 @@
     character = (Character*)[CCBReader load:@"Character"];
     // add character as a child of physicsNode
     [physicsNode addChild:character];
+    
     [self addObstacle];
     timeSinceObstacle = 0.0f;
 }

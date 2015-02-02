@@ -16,6 +16,12 @@
     timeSinceObstacle = 0.0f;
 }
 
+// put new methods here
+- (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
+    // this will get called every time the player touches the screen
+    [character flap];
+}
+
 - (void)update:(CCTime)delta
 {
     // this will be run every frame.
@@ -34,9 +40,6 @@
     }
 }
 
-// put new methods here
-- (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
-    // this will get called every time the player touches the screen
-    [character flap];
-}
+
+
 @end
